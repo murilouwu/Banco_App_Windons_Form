@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC774789-B619-4E4A-AF82-911AC31F8A30}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProjetoBdMuriloGimenez</RootNamespace>
+    <AssemblyName>ProjetoBdMuriloGimenez</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BdCadastroDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BdCadastroDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadClient.Designer.cs">
+      <DependentUpon>frmCadClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadFornecedor.Designer.cs">
+      <DependentUpon>frmCadFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadProd.Designer.cs">
+      <DependentUpon>frmCadProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadUser.Designer.cs">
+      <DependentUpon>frmCadUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPricipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPricipal.Designer.cs">
+      <DependentUpon>FrmPricipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelCli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelCli.Designer.cs">
+      <DependentUpon>FrmRelCli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelForn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelForn.Designer.cs">
+      <DependentUpon>FrmRelForn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelProd.Designer.cs">
+      <DependentUpon>FrmRelProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelUser.Designer.cs">
+      <DependentUpon>FrmRelUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSearchClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSearchClient.Designer.cs">
+      <DependentUpon>FrmSearchClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSearchFor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSearchFor.Designer.cs">
+      <DependentUpon>FrmSearchFor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSearchProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSearchProd.Designer.cs">
+      <DependentUpon>FrmSearchProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSearchUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSearchUser.Designer.cs">
+      <DependentUpon>FrmSearchUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="frmCadClient.resx">
+      <DependentUpon>frmCadClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadFornecedor.resx">
+      <DependentUpon>frmCadFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadProd.resx">
+      <DependentUpon>frmCadProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadUser.resx">
+      <DependentUpon>frmCadUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPricipal.resx">
+      <DependentUpon>FrmPricipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelCli.resx">
+      <DependentUpon>FrmRelCli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelForn.resx">
+      <DependentUpon>FrmRelForn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelProd.resx">
+      <DependentUpon>FrmRelProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelUser.resx">
+      <DependentUpon>FrmRelUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSearchClient.resx">
+      <DependentUpon>FrmSearchClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSearchFor.resx">
+      <DependentUpon>FrmSearchFor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSearchProd.resx">
+      <DependentUpon>FrmSearchProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSearchUser.resx">
+      <DependentUpon>FrmSearchUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ReportCli.rdlc" />
+    <EmbeddedResource Include="ReportForn.rdlc" />
+    <EmbeddedResource Include="ReportProd.rdlc" />
+    <EmbeddedResource Include="ReportUser.rdlc" />
+    <None Include="BdCadastroDataSet.xsc">
+      <DependentUpon>BdCadastroDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BdCadastroDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BdCadastroDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BdCadastroDataSet.xss">
+      <DependentUpon>BdCadastroDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BdCadastro.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BdCadastro_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>BdCadastro.mdf</DependentUpon>
+    </Content>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
